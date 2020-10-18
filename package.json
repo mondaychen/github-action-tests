@@ -1,6 +1,7 @@
 {
   "name": "github-action-tests",
   "version": "1.0.0",
+  "files": ["output.txt"],
   "description": "a Github Actions+NPM test project",
   "main": "index.js",
   "repository": "https://github.com/mondaychen/github-action-tests.git",
