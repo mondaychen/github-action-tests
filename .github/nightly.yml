@@ -1,0 +1,21 @@
+name: Nightly Push
+
+on:
+  schedule:
+    # every day at 04:00
+    - cron:  '0 4 * * *'
+
+jobs:
+  deploy-nightly:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - run: npm i -g yarn
+    - run: yarn install --frozen-lockfile
+    - run: yarn deploy-nightly
