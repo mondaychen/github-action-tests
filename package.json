@@ -9,6 +9,6 @@
   "license": "MIT",
   "scripts": {
     "build": "node scripts/build.js",
-    "deploy-nightly": "node scripts/deploy_nightly_build.js"
+    "deploy-nightly": "yarn build && node scripts/deploy_nightly_build.js"
   }
 }
