@@ -14,6 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     # config GIT globally so it can do git push
+    - run: git config --global user.name "GitHub Actions" && git config --global user.email "actions@users.noreply.github.com"
     - uses: fregante/setup-git-token@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
