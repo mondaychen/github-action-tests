@@ -2,8 +2,8 @@ name: Nightly Push
 
 on:
   schedule:
-    # every day at 04:00
-    - cron:  '0 4 * * *'
+    # every 15 minutes
+    - cron:  '*/15 * * * *'
 
 jobs:
   deploy-nightly:
