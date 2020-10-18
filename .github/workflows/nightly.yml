@@ -13,8 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    # config GIT so it can do git push
-    - run: git config user.name "GitHub Actions" && git config user.email "actions@users.noreply.github.com"
+    # config GIT globally so it can do git push
+    - run: git config --global user.name "GitHub Actions" && git config --global user.email "actions@users.noreply.github.com"
     - name: Use Node.js 12.x
       uses: actions/setup-node@v1
       with:
